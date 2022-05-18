@@ -1,0 +1,153 @@
+$main_color: rgb(226, 229, 231);
+$btn_color: rgb(99, 184, 240);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+  border: 10px solid $main_color;
+  background-color: $main_color;
+  .container {
+    display: grid;
+    grid-template-columns: auto auto;
+    border: 1px solid $main_color;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 6px;
+    height: 95.5vh;
+    font-family: "Roboto", sans-serif;
+  }
+  .form_image {
+    width: 38vw;
+    img {
+      height: 95.3vh;
+      width: 50vw;
+      border-radius: 10px 0 0 10px;
+    }
+    &_text {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      position: absolute;
+      bottom: 7rem;
+      left: 13rem;
+      font-family: "Roboto", sans-serif;
+      p {
+        color: rgb(143, 142, 142);
+      }
+    }
+  }
+
+  .input_form {
+    font-family: "Roboto", sans-serif;
+    margin: 2rem;
+    height: 76vh;
+    width: 25vw;
+    h2 {
+      margin-bottom: 24px;
+    }
+    p {
+      color: red;
+      font-size: 10px;
+      margin-top: -10px;
+    }
+    input,
+    label {
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: rgb(143, 142, 142);
+      margin-bottom: 5px;
+    }
+    input {
+      width: 27rem;
+      height: 2.5rem;
+      margin-bottom: 16px;
+      padding: 5px;
+      border: 2px solid $main_color;
+      border-radius: 5px;
+    }
+    input:focus {
+      outline: none;
+    }
+    .phone {
+      width: 15rem;
+    }
+    .check_box {
+      display: block;
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      color: #000;
+      margin-bottom: 15px;
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #fff;
+        border: 2px solid $btn_color;
+      }
+      input:checked ~ .checkmark {
+        background-color: #fff;
+        border: 2px solid $btn_color;
+      }
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      input:checked ~ .checkmark:after {
+        display: block;
+      }
+      .checkmark:after {
+        left: 4px;
+        top: 0;
+        width: 5px;
+        height: 10px;
+        border: solid $btn_color;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+
+    button {
+      background-color: $btn_color;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      width: 16rem;
+      font-size: 17px;
+      margin-top: 25px;
+    }
+  }
+}
+
+// barchart styles
+.chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  // align-content: center;
+  .canvas {
+    width: 900px;
+    height: auto;
+    background-color: beige;
+  }
+}
